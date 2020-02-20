@@ -1,0 +1,15 @@
+# Configuration for the default Kabanero stack hub
+name: Kabanero Stack Hub
+description: This is the default stack hub for Kabanero
+version: 0.6.0
+stacks:
+  - name: kabanero-stack-hub
+    repos:
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.2/java-openliberty-0.2.1-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.2/java-spring-boot2-0.3.23-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.2/nodejs-0.3.1-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.2/nodejs-express-0.2.8-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.2/java-microprofile-0.2.25-index.yaml
+image-org:
+image-registry:
+nginx-image-name:
