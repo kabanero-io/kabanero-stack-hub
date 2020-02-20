@@ -1,0 +1,14 @@
+# Sample configuration for Kabanero stack hub
+name: Stack exlcude test
+description: Configuration to test stack exclusion
+version: 0.1.0
+stacks:
+  - name: exclude-stacks
+    repos:
+      - url: file://{{TEST_DIR}}/repositories/nodejs-repo.yaml
+        exclude: 
+          - nodejs-loopback
+          - node-red
+image-org:
+image-registry:
+nginx-image-name:

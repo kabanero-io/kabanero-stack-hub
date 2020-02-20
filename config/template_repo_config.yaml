@@ -1,0 +1,17 @@
+# Sample configuration for Kabanero stack hub
+name: <Stack Hub name> 
+description: <Stack Hub description>
+version: <Stack Hub version>
+stacks:
+  - name: <Stack Hub index name>
+    repos:
+      - url: <Reference to index file>
+        exclude:
+          - <stack name>
+          - <stack name>
+        include:
+          - <stack name>
+          - <stack name>
+image-org: <Organisation containing images within registry, default="appsody">
+image-registry: <Image registry hosting images, default="docker.io">
+nginx-image-name: <Image name for the generated nginx image, default="repo-index"> 

@@ -1,0 +1,15 @@
+# Test single reference with image overrides.
+name: Test-single-index-with-overrides
+description: Test a single index file is reconstructed correctly when image overrides are specified.
+input-configuration: single_reference_overrides.yaml
+expected-results:
+  - output-file: single-ref-override-index.yaml
+    number-of-stacks: 4
+    included-stacks:
+      - id: nodejs
+      - id: nodejs-express
+      - id: nodejs-loopback
+      - id: node-red
+    image-registry: test_registry.io
+    image-org: test_org
+    host-path:

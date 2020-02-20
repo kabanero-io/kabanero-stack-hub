@@ -1,0 +1,15 @@
+# Test single reference.
+name: Test-single-index
+description: Test a single index file is reconstructed correctly
+input-configuration: single_reference.yaml
+expected-results:
+  - output-file: single-ref-index.yaml
+    number-of-stacks: 4
+    included-stacks:
+      - id: nodejs
+      - id: nodejs-express
+      - id: nodejs-loopback
+      - id: node-red
+    image-registry:
+    image-org:
+    host-path:

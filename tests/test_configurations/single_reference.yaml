@@ -1,0 +1,11 @@
+# Sample configuration for Kabanero stack hub
+name: Single Reference test
+description: Configuration to test recreation of a single index
+version: 0.1.0
+stacks:
+  - name: single-ref
+    repos:
+      - url: file://{{TEST_DIR}}/repositories/nodejs-repo.yaml
+image-org:
+image-registry:
+nginx-image-name:

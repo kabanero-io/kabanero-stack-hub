@@ -1,0 +1,14 @@
+# Test stack inclusion.
+name: Test-include-stacks
+description: Test stacks are included correctly
+version: 0.1.0
+stacks:
+  - name: include-stacks
+    repos:
+      - url: file://{{TEST_DIR}}/repositories/nodejs-repo.yaml
+        include: 
+          - nodejs-loopback
+          - node-red
+image-org:
+image-registry:
+nginx-image-name:

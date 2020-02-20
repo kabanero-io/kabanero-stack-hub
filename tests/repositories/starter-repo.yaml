@@ -1,0 +1,18 @@
+apiVersion: v2
+stacks:
+- id: starter
+  name: Starter Sample
+  version: 0.1.2
+  description: Runnable starter stack, copy to create a new stack
+  license: Apache-2.0
+  language: bash
+  maintainers:
+  - name: Henry Nash
+    email: henry.nash@uk.ibm.com
+    github-id: henrynash
+  default-template: simple
+  src: https://github.com/appsody/stacks/releases/download/starter-v0.1.2/incubator.starter.v0.1.2.source.tar.gz
+  templates:
+  - id: simple
+    url: https://github.com/appsody/stacks/releases/download/starter-v0.1.2/incubator.starter.v0.1.2.templates.simple.tar.gz
+  image: docker.io/appsody/starter:0.1.2

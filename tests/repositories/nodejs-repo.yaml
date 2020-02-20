@@ -1,0 +1,77 @@
+apiVersion: v2
+stacks:
+- id: nodejs
+  name: Node.js
+  version: 0.3.3
+  description: Runtime for Node.js applications
+  license: Apache-2.0
+  language: nodejs
+  maintainers:
+  - name: Sam Roberts
+    email: vieuxtech@gmail.com
+    github-id: sam-github
+  default-template: simple
+  src: https://github.com/appsody/stacks/releases/download/nodejs-v0.3.3/incubator.nodejs.v0.3.3.source.tar.gz
+  templates:
+  - id: simple
+    url: https://github.com/appsody/stacks/releases/download/nodejs-v0.3.3/incubator.nodejs.v0.3.3.templates.simple.tar.gz
+  requirements:
+    docker-version: '>= 17.09.0'
+    appsody-version: '>= 0.2.7'
+  image: docker.io/appsody/nodejs:0.3.3
+- id: nodejs-express
+  name: Node.js Express
+  version: 0.4.2
+  description: Express web framework for Node.js
+  license: Apache-2.0
+  language: nodejs
+  maintainers:
+  - name: Sam Roberts
+    email: vieuxtech@gmail.com
+    github-id: sam-github
+  default-template: simple
+  src: https://github.com/appsody/stacks/releases/download/nodejs-express-v0.4.2/incubator.nodejs-express.v0.4.2.source.tar.gz
+  templates:
+  - id: scaffold
+    url: https://github.com/appsody/stacks/releases/download/nodejs-express-v0.4.2/incubator.nodejs-express.v0.4.2.templates.scaffold.tar.gz
+  - id: simple
+    url: https://github.com/appsody/stacks/releases/download/nodejs-express-v0.4.2/incubator.nodejs-express.v0.4.2.templates.simple.tar.gz
+  requirements:
+    docker-version: '>= 17.09.0'
+    appsody-version: '>= 0.2.7'
+  image: docker.io/appsody/nodejs-express:0.4.2
+- id: nodejs-loopback
+  name: LoopBack 4
+  version: 0.2.2
+  description: LoopBack 4 API Framework for Node.js
+  license: Apache-2.0
+  language: nodejs
+  maintainers:
+  - name: Raymond Feng
+    email: enjoyjava@gmail.com
+    github-id: raymondfeng
+  default-template: scaffold
+  src: https://github.com/appsody/stacks/releases/download/nodejs-loopback-v0.2.2/incubator.nodejs-loopback.v0.2.2.source.tar.gz
+  templates:
+  - id: scaffold
+    url: https://github.com/appsody/stacks/releases/download/nodejs-loopback-v0.2.2/incubator.nodejs-loopback.v0.2.2.templates.scaffold.tar.gz
+  requirements:
+    docker-version: '>= 17.09.0'
+    appsody-version: '>= 0.2.7'
+  image: docker.io/appsody/nodejs-loopback:0.2.2
+- id: node-red
+  name: Node-RED
+  version: 0.1.1
+  description: Node-RED runtime for running flows
+  license: Apache-2.0
+  language: nodejs
+  maintainers:
+  - name: Nick O'Leary
+    email: nick.oleary@gmail.com
+    github-id: knolleary
+  default-template: simple
+  src: https://github.com/appsody/stacks/releases/download/node-red-v0.1.1/incubator.node-red.v0.1.1.source.tar.gz
+  templates:
+  - id: simple
+    url: https://github.com/appsody/stacks/releases/download/node-red-v0.1.1/incubator.node-red.v0.1.1.templates.simple.tar.gz
+  image: docker.io/appsody/node-red:0.1.1

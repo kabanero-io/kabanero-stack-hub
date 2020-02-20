@@ -1,0 +1,16 @@
+# Test composition from multiple references.
+name: Test-index-composition
+description: Test multiple index files are merged correctly
+input-configuration: index_composition.yaml
+expected-results:
+  - output-file: index-composition-index.yaml
+    number-of-stacks: 5
+    included-stacks:
+      - id: nodejs
+      - id: nodejs-express
+      - id: nodejs-loopback
+      - id: node-red
+      - id: starter
+    image-registry:
+    image-org:
+    host-path:

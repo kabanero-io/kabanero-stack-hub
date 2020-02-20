@@ -1,0 +1,12 @@
+# Sample configuration for Kabanero stack hub
+name: Index composition test
+description: Configuration to test composition of multiple indexes
+version: 0.1.0
+stacks:
+  - name: index-composition
+    repos:
+      - url: file://{{TEST_DIR}}/repositories/nodejs-repo.yaml
+      - url: file://{{TEST_DIR}}/repositories/starter-repo.yaml
+image-org:
+image-registry:
+nginx-image-name:

@@ -1,0 +1,24 @@
+# Sample configuration for Kabanero stack hub
+name: Sample Stack Hub
+description: A sample configuration file that builds a pair of stack hub indexes, default and incubator.
+version: 0.1.0
+stacks:
+  - name: default
+    repos:
+      - url: https://github.com/appsody/stacks/releases/latest/download/incubator-index.yaml
+        exclude: 
+          - kitura
+          - node-red
+          - python-flask
+          - starter
+          - swift
+          - java-microprofile
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.1/kabanero-index.yaml
+        include:
+          - java-microprofile
+  - name: incubator
+    repos:
+      - url: https://github.com/appsody/stacks/releases/download/java-openliberty-v0.2.0/incubator-index.yaml
+image-org: kabanero
+image-registry: docker.io
+nginx-image-name: kabanero-index

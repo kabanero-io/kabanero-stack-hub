@@ -1,0 +1,13 @@
+# Test stack inclusion.
+name: Test-include-stacks
+description: Test stacks are included correctly
+input-configuration: include_stacks.yaml
+expected-results:
+  - output-file: include-stacks-index.yaml
+    number-of-stacks: 2
+    included-stacks:
+      - id: node-red
+      - id: nodejs-loopback
+    image-registry:
+    image-org:
+    host-path:

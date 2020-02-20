@@ -1,0 +1,12 @@
+# Template configuration for a repo-tools test
+name: <Name of test>
+description: <Description of test>
+input-configuration: <Path to input repo-tools configuration>
+expected-results:
+  - output-file: <expected output file>
+    number-of-stacks: <expected number of stacks in resulting configuration>
+    included-stacks:
+      - <name of included stack>
+    image-registry: <expected image registry>
+    image-org: <expected image org>
+    host-path: <expected hosting path>
