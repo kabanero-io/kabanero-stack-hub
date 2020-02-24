@@ -1,0 +1,24 @@
+language: generic
+
+os: linux
+dist: bionic
+
+services:
+  - docker
+
+before_install:
+  - ./scripts/install_yq.sh
+
+script:
+  - ./scripts/hub_build.sh default_kabanero_config.yaml
+  - ./scripts/list_artifacts.sh
+    
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key: $GITHUB_TOKEN
+  file: assets/*
+  file_glob: true
+  on:
+    tags: true
+    repo: kabanero-io/kabanero-stack-hub
