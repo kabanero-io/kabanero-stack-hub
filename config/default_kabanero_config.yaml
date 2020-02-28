@@ -5,11 +5,11 @@ version: 0.6.0
 stacks:
   - name: kabanero-stack-hub
     repos:
-      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.4/java-openliberty-0.2.2-index.yaml
-      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.4/java-spring-boot2-0.3.24-index.yaml
-      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.4/nodejs-0.3.2-index.yaml
-      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.4/nodejs-express-0.2.10-index.yaml
-      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0-rc.4/java-microprofile-0.2.25-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0/java-openliberty-0.2.2-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0/java-spring-boot2-0.3.24-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0/nodejs-0.3.2-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0/nodejs-express-0.2.10-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.6.0/java-microprofile-0.2.25-index.yaml
 image-org:
 image-registry:
 nginx-image-name:
