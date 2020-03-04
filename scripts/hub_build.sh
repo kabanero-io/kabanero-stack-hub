@@ -159,9 +159,10 @@ then
                 (curl -s -L ${url} -o $build_dir/$fetched_index_file)
 
                 echo "== Adding stacks from index $url"
-
-                # check if we have any included stacks
                 declare -a included
+                declare -a excluded
+                
+                # check if we have any included stacks
                 included_stacks=$(yq r ${configfile} stacks[$stack_count].repos[$url_count].include)
                 if [ ! "${included_stacks}" == "null" ]
                 then
@@ -170,6 +171,8 @@ then
                     do
                         included=("${included[@]}" "$(yq r ${configfile} stacks[$stack_count].repos[$url_count].include[$included_count]) ")
                     done
+                else
+                	unset included   
                 fi
 
                 # check if we have any excluded stacks
@@ -182,6 +185,8 @@ then
                     do
                         excluded=("${excluded[@]}" "$(yq r ${configfile} stacks[$stack_count].repos[$url_count].exclude[$excluded_count]) ")
                     done
+                else
+                    unset excluded
                 fi
                 
                 # count the stacks within the index

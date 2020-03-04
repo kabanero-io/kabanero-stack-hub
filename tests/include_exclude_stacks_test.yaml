@@ -1,0 +1,14 @@
+# Test stack exclusion.
+name: Test-include-exclude-stacks
+description: Test stacks are included and excluded correctly
+input-configuration: include_exclude_stacks.yaml
+expected-results:
+  - output-file: include-exclude-stacks-index.yaml
+    number-of-stacks: 3
+    included-stacks:
+      - id: nodejs
+      - id: nodejs-express
+      - id: java-openliberty
+    image-registry:
+    image-org:
+    host-path:
