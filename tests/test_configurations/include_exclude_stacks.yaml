@@ -1,0 +1,17 @@
+# Sample configuration for Kabanero stack hub
+name: Stack include & exclude test
+description: Configuration to test stack inclusion and exclusion
+version: 0.1.0
+stacks:
+  - name: include-exclude-stacks
+    repos:
+      - url: file://{{TEST_DIR}}/repositories/nodejs-repo.yaml
+        exclude: 
+          - nodejs-loopback
+          - node-red
+      - url: file://{{TEST_DIR}}/repositories/java-repo.yaml
+        include:
+          - java-openliberty
+image-org:
+image-registry:
+nginx-image-name:
