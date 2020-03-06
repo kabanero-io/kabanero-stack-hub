@@ -1,7 +1,7 @@
 # Configuration for the default Kabanero stack hub
 name: Kabanero Stack Hub
 description: This is the default stack hub for Kabanero
-version: 0.6.1
+version: 0.7.0
 stacks:
   - name: kabanero-stack-hub
     repos:
