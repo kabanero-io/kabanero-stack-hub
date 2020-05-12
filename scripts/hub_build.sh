@@ -149,7 +149,10 @@ then
             echo "stacks:" >> $index_file_temp
             
             num_urls=$(yq r ${configfile} stacks[$stack_count].repos[*].url | wc -l)
-            
+           
+            declare -a included
+            declare -a excluded
+
             for ((url_count=0;url_count<$num_urls;url_count++)); 
             do
                 url=$(yq r ${configfile} stacks[$stack_count].repos[$url_count].url)
@@ -159,8 +162,8 @@ then
                 (curl -s -L ${url} -o $build_dir/$fetched_index_file)
 
                 echo "== Adding stacks from index $url"
-                declare -a included
-                declare -a excluded
+                unset included
+                unset excluded
                 
                 # check if we have any included stacks
                 included_stacks=$(yq r ${configfile} stacks[$stack_count].repos[$url_count].include)
@@ -224,7 +227,9 @@ then
                     if [ $add_stack_to_index == true ]
                     then
                         yq r $all_stacks stacks.[$index_stack_count] > $one_stack
-                    
+                   
+			stack_added="false"
+ 
                         # check if stack has already been added to consolidated index
                         num_added_stacks=$(yq r $index_file_temp stacks[*].id | wc -l)
                         for ((added_stack_count=0;added_stack_count<$num_added_stacks;added_stack_count++));
