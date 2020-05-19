@@ -5,9 +5,9 @@ version: 0.9.0-rc.1
 stacks:
   - name: kabanero-stack-hub
     repos:
-      - url: https://github.com/kabanero-io/collections/releases/download/0.9.0-rc.1/java-spring-boot2-0.3.29-index.yaml
-      - url: https://github.com/kabanero-io/collections/releases/download/0.9.0-rc.1/nodejs-0.3.6-index.yaml
-      - url: https://github.com/kabanero-io/collections/releases/download/0.9.0-rc.1/nodejs-express-0.4.8-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.9.0/java-spring-boot2-0.3.29-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.9.0/nodejs-0.3.6-index.yaml
+      - url: https://github.com/kabanero-io/collections/releases/download/0.9.0/nodejs-express-0.4.8-index.yaml
       - url: https://github.com/appsody/stacks/releases/download/quarkus-v0.3.6/incubator-index.yaml
         include: 
           - quarkus
